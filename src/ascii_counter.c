@@ -127,8 +127,8 @@ char *ascii_parse(const char *str, int *last_code)
     if (str == NULL) 
         goto fail;
 
-    int str_len     = (int)strlen(str);
-    int offset      = str_len;
+    int str_len         = (int)strlen(str);
+    volatile int offset = str_len;
     int pair_cnt    = 0;
     
     ret_data = _strdup2(str);
