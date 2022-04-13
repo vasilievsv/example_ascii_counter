@@ -141,7 +141,7 @@ char *ascii_parse(const char *str, int *last_code)
         goto fail;
 
     // Обход с конца массива
-    while (offset != 0) {
+    while (offset > 0) {
 
         char h_symbol = *(ret_data + offset - 2); // symbol high - alpha
         char l_symbol = *(ret_data + offset - 1); // symbol low  - numeric
