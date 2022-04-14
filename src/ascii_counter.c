@@ -63,6 +63,8 @@ char* ascii_realloc_buff(char* buff)
     //swap
     free((void*)buff);
     buff = new_buff;
+
+    return new_buff;
 }
 
 static int ascii_check_policy(const char *str)
