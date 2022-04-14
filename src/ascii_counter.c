@@ -46,16 +46,23 @@ static inline int ascii_increment_numeric(char *ch)
 
 char* ascii_realloc_buff(char* buff)
 {
-    char *new_buff = (char*)malloc(strlen(buff) + 3 + 1);
+    static const char *tmp_token = "B1-";
+    static int tmp_token_len     = 3;
+
+    if (buff == NULL) 
+        return;
+
+    int buff_len = strlen(buff);
+
+    char *new_buff = (char*)malloc(buff_len + tmp_token_len + 1); // + zero
     if (new_buff == NULL) 
         return NULL;
 
-    strcpy(new_buff, "B1-");
-    strcpy(new_buff + strlen(buff) + 1, buff);
-
+    memcpy(new_buff,tmp_token, tmp_token_len);
+    memcpy(new_buff + tmp_token_len, buff, buff_len);
+    //swap
     free((void*)buff);
-
-    return new_buff;
+    buff = new_buff;
 }
 
 static int ascii_check_policy(const char *str)

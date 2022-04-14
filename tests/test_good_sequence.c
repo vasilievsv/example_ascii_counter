@@ -44,6 +44,11 @@ MU_TEST(test_size_policy)
     mu_check(rc < 0);
     mu_check(buff == NULL);
     free(buff);
+
+    buff = ascii_parse("Z9-Z9", &rc);
+    mu_check(rc == ASCII_OK);
+     buff = ascii_parse("B1-B1-B1", &rc);
+    free(buff);
 }
 
 
