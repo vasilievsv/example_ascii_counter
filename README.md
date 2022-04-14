@@ -1,4 +1,5 @@
 ﻿# Генератор ASCII последовательности
+![Animation](https://user-images.githubusercontent.com/32985830/163470667-add56c29-1a2b-476f-9e17-1d78411266c2.gif)
 
 
 ## Правила построения
