@@ -17,10 +17,10 @@
 
 #define ASCII_MAX_SIZE 10*2
 
-#define ASCII_IS_DELIMITER(_x) ((_x == '-'))
-#define ASCII_IS_NUMERIC(_x) ((_x >= '0' && _x <= '9'))
-#define ASCII_IS_ALPHA(_x) ((_x >= 'A' && _x <= 'Z'))
+#define ASCII_IS_DELIMITER(_x) (_x == '-')
+#define ASCII_IS_NUMERIC(_x) (_x >= '0' && _x <= '9')
+#define ASCII_IS_ALPHA(_x) (_x >= 'A' && _x <= 'Z')
 
-extern char* ascii_parse(const char *str, int *ret_buf);
+extern char* ascii_parse(const char *str, int *last_code);
 
 #endif
