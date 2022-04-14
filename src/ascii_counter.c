@@ -50,7 +50,7 @@ char* ascii_realloc_buff(char* buff)
     static int tmp_token_len     = 3;
 
     if (buff == NULL) 
-        return;
+        return NULL;
 
     int buff_len = strlen(buff);
 
