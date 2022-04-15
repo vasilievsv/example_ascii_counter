@@ -27,15 +27,15 @@ int main(int argc, char* argv[])
                 printf("%s\n", data);
                 _swap_ptr(&data, &raw_data);
                 free(data);
-            }else
+            }else{
                 printf("error:%d\n", rc);
+                break;
+            }
             it--;
 
             usleep(55000);
         }
-        
     }
-    else
-       
+    
     return 0;
 }
