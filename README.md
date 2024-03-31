@@ -9,13 +9,13 @@
 3. Максимальная длина идентификатора - десять групп по два символа.
 
 ## Сборка
-`
+```bash
 mkdir build 
 cd build
 cmake ..
 cmake --build .
 ctest -V
-`
+```
 
 ## etc
 http://blog.martincowen.me.uk/unit-testing-embedded-c-on-target-with-minunit-and-off-target-with-ms-test.html
