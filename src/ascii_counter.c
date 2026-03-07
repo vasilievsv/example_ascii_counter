@@ -52,17 +52,17 @@ char* ascii_realloc_buff(char* buff)
     if (buff == NULL) 
         return NULL;
 
-    int buff_len = strlen(buff);
+    size_t buff_len = strlen(buff);
 
     char *new_buff = (char*)malloc(buff_len + tmp_token_len + 1); // + zero
     if (new_buff == NULL) 
         return NULL;
 
-    memcpy(new_buff,tmp_token, tmp_token_len);
+    memcpy(new_buff, tmp_token, tmp_token_len);
     memcpy(new_buff + tmp_token_len, buff, buff_len);
-    //swap
+    new_buff[buff_len + tmp_token_len] = '\0';
+    
     free((void*)buff);
-    buff = new_buff;
 
     return new_buff;
 }
