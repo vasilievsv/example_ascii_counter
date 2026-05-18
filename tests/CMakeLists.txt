@@ -1,6 +1,7 @@
 set(TESTS
     error_sequence
-    good_sequence)
+    good_sequence
+    fuzz_sequence)
 
 foreach(fname ${TESTS})
     add_executable(test_${fname} test_${fname}.c)

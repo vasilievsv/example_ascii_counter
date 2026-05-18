@@ -15,7 +15,7 @@
 #define ASCII_ERROR_MISS_DELIMETR      -5
 #define ASCII_ERROR_MAX_SIZE           -6
 
-#define ASCII_MAX_SIZE 10*2
+#define ASCII_MAX_SIZE (10*2)
 
 #define ASCII_IS_DELIMITER(_x) (_x == '-')
 #define ASCII_IS_NUMERIC(_x) (_x >= '0' && _x <= '9')

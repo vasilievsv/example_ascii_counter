@@ -116,15 +116,6 @@ int ascii_validate_token(char h_symbol, char l_symbol, int* cnt)
     if(ASCII_IS_ALPHA(l_symbol) || l_symbol == '0')
         return ASCII_ERROR;
 
-    if (ASCII_IS_NUMERIC(h_symbol) && ASCII_IS_NUMERIC(l_symbol))
-        return ASCII_ERROR;
-
-    if (ASCII_IS_ALPHA(h_symbol) && ASCII_IS_ALPHA(l_symbol))
-        return ASCII_ERROR;
-
-    if (ASCII_IS_NUMERIC(h_symbol) && ASCII_IS_ALPHA(l_symbol))
-        return ASCII_ERROR;
-
     return ASCII_OK;
 }
 
